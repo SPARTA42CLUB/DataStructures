@@ -28,7 +28,7 @@ This repository serves as a space for study materials and discussions for a stud
 
 ## References
 
-- [Fundamentals of Data Structures in C book](https://example.com/book-link)
+- [Fundamentals of Data Structures in C book](http://ce.eng.usc.ac.ir/files/1513332984078.pdf)
 - [Horowitz, Sahni, and Anderson's official website](https://example.com)
 
 ## Contributing
