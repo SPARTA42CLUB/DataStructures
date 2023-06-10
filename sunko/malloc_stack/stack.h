@@ -1,28 +1,29 @@
-#ifndef ARRAY_STACK_H
-# define ARRAY_STACK_H
+#ifndef	STACK_H
+# define STACK_H
 
 # include <stdio.h>
 # include <stdlib.h>
 # include <stdbool.h>
-# define MAX_STACK_SIZE 100
 
 typedef struct {
-	int n;
-	int k;
+	int	n;
+	int	k;
 	char *f_name;
 }	element;
 
 typedef struct {
-	element stack[MAX_STACK_SIZE];
-	int top;
+	element	*stack;
+	int		top;
+	int		capacity;
 }	Stack;
 
 Stack	CreateS(void);
 void	push(Stack *s, element item);
+bool	isEmpty(Stack *s);
+bool	isFull(Stack *s);
+void	stackFull(Stack *s);
 element	pop(Stack *s);
-bool	IsEmpty(Stack *s);
-bool	IsFull(Stack *s);
-void	stackFull(void);
+void	stackEmpty(void);
 void	stackEmpty(void);
 
 #endif

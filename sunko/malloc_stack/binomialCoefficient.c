@@ -1,8 +1,8 @@
-#include "array_stack.h"
+#include "stack.h"
 
 int	binomialCoefficient(int n, int k, Stack *s)
 {
-	element new_data;
+	element	new_data;
 	new_data.f_name = "binomialCoefficient";
 	new_data.k = k;
 	new_data.n = n;
