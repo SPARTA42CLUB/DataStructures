@@ -3,6 +3,9 @@
 Stack	CreateS(void)
 {
 	Stack	s;
+	s.stack = (element *)malloc(sizeof(element));
+	if (!s.stack)
+		stackFull(&s);
 	s.top = -1;
 	s.capacity = 1;
 	return (s);
@@ -13,9 +16,9 @@ void	push(Stack *s, element item)
 	if (isFull(s))
 		stackFull(s);
 	s->stack[++(s->top)] = item;
-	printf("호출한 함수 : binomialCoefficient(%d, %d)\n", item.n, item.k);
+	printf("새롭게 push된 함수 : binomialCoefficient(%d, %d)\n", item.n, item.k);
 	for (int i = 0; i <= s->top; i++) {
-		printf("binomialCoefficient(%d, %d)\n", s->stack[i].n, s->stack[i].k);
+		printf("현재 %d번 스택 : binomialCoefficient(%d, %d)\n", i, s->stack[i].n, s->stack[i].k);
 	}
 	printf("\n");
 }
