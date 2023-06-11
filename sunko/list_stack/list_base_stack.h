@@ -19,7 +19,7 @@ typedef struct _listStack
 
 typedef ListStack Stack;
 
-void	StackIni(Stack *pstack);
+void	StackInit(Stack *pstack);
 int		SIsEmpty(Stack *pstack);
 void	SPush(Stack *pstack, Data data);
 Data	SPop(Stack *pstack);
