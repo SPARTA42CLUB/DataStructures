@@ -1,13 +1,14 @@
+TARGET = list_stack
 SRCS = list_base_stack.c list_base_stack_main.c
-BONUS_SRCS = list_base_stack.c InfixToPostfixMain.c InfixToPostfix.c
+BONUS_SRCS = list_base_stack.c InfixToPostfix.c PostCalculator.c InfixCalculator.c Calculator.c
+
 OBJS = $(SRCS:.c=.o)
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
-all: $(NAME)
-
+all: $(TARGET)
 bonus: make_bonus
 
-$(NAEM): $(OBJS)
+$(TARGET): $(OBJS)
 	gcc -o $@ $^
 
 make_bonus: $(BONUS_OBJS)
@@ -17,7 +18,7 @@ make_bonus: $(BONUS_OBJS)
 	gcc -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean:
-	rm -f $(OBJS) $(NAME) calculator
+	rm -f $(OBJS) $(BONUS_OBJS) $(TARGET) calculator
