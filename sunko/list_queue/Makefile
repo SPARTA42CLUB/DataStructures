@@ -3,16 +3,16 @@ SRCS = ListBaseQueue.c ListBaseQueueMain.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(TARGET)
-bonus: make_bonus
 
 $(TARGET): $(OBJS)
 	gcc -o $@ $^
+
 
 %.o: %.c
 	gcc -c $< -o $@
 
 clean:
-	rm -f  $(OBJS)
+	rm -f  $(OBJS) $(BONUS_OBJS)
 
 fclean:
-	rm -f $(OBJS) $(TARGET)
+	rm -f $(OBJS)  $(BONUS_OBJS) $(TARGET)

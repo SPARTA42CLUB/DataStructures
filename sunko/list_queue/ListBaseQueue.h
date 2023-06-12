@@ -15,6 +15,7 @@ typedef struct _lQueue
 {
 	t_node	*front;
 	t_node	*rear;
+	int		que_len;
 }	LQueue;
 
 typedef LQueue Queue;

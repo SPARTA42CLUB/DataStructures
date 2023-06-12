@@ -6,6 +6,7 @@ void	QueueInit(Queue *pq)
 {
 	pq->front = NULL;
 	pq->rear = NULL;
+	pq->que_len = 0;
 }
 
 bool	QIsEmpty(Queue *pq)
@@ -27,6 +28,7 @@ void	Enqueue(Queue *pq, Data data)
 	}
 	new_node->next = NULL;
 	new_node->data = data;
+	pq->que_len += 1;
 	if (QIsEmpty(pq))
 	{
 		pq->front = new_node;
