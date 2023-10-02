@@ -130,19 +130,3 @@ void	DFShowGraphVertex(ALGraph *pg, int startV)
 	}
 	memset(pg->visitInfo, 0, sizeof(int) * pg->numV);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
